@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            System.out.println("What type of operation are you doing? (plus or +, minus or -, multiply of *, divide or /)");
+            String operation = scanner.next();
+
+            System.out.println("Type First Number");
+                    int number1 = scanner.nextInt();
+
+            System.out.println("Type Second Number");
+                    int number2 = scanner.nextInt();
+
+                   int result = 0;
+
+                   switch (operation) {
+                       case "plus", "+": result = number1 + number2; break;
+                       case "minus", "-": result = number1 - number2; break;
+                       case "multiply", "*": result = number1 * number2; break;
+                       case "divide", "/": result = number1 / number2; break;
+                       default: result = 0; break;
+                   }
+                   System.out.println("The result is " + number1 + " " + operation +" " + number2 + " = " + result);
+                   break;
+        }
+    }
+}
